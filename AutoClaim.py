@@ -20,7 +20,7 @@ data= [ x.replace("\n","") for x in g.readlines() ]
 g.close()
 
 c = [ x.split(',') for x in data[:2]]
-print(c)
+
 
 
 def FirefoxPC(Headless = Headless):
@@ -123,3 +123,5 @@ def main(c) :
             await client.close()
 
         client.run(Token, bot=False)
+
+main(c)
