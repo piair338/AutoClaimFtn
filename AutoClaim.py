@@ -12,6 +12,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 import pyotp
 import discord
+import asyncio
 
 Headless = True
 Path = "/home/pi/DalyRewardsFtn/custom/data.txt"
@@ -114,7 +115,7 @@ def main(c) :
         p = str(i[3])
         channel = int(i[4])
  
-
+        asyncio.set_event_loop(asyncio.new_event_loop())
         client = discord.Client()
         @client.event
         async def on_ready():
